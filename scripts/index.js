@@ -33,7 +33,7 @@ function fetchLaptopsFromLocalStorage(){
        const row = `
            <tr>
                <td>${laptop.name}</td>
-               <td>${laptop.deviceId}</td>
+               <td>${laptop.display}</td>
                 <td>${laptop.productId}</td>
                <td>${laptop.processor}</td>
                <td>${laptop.ram} GB</td>
