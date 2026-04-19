@@ -1,65 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   
-   
-    <title>Laptop online Shop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Online Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .navbar { background-color: #0f172a !important; }
+        .card { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: none; }
+        .table thead { background-color: #1e2937; color: white; }
+        .btn-lg { font-weight: 600; }
+    </style>
 </head>
-<body >
-  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom mb-5">
-    <div class="container">
-        <a class='navbar-brand fw-bold text-primary' href='index.html'>Laptop Shop </a>
-    </div>
-</nav>
+<body>
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">💻 Laptop Online Shop</a>
+        </div>
+    </nav>
 
-   <div class="container">
-    <div class="row align-items-center mb-4">
-        <div class="col-md-8">
-            <h2 class="display-6 fw-semibold">Inventory Management</h2>
-            <p class="text-muted">Manage all the laptops for this online shop</p>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-dark">Inventory</h2>
+            <a href="add-laptop.html" class="btn btn-success btn-lg">+ Add Laptop</a>
         </div>
-        <div class="col-md-4 text-md-end">
-            <a class='btn btn-primary rounded-pill px-4' href='add-laptop.html'>+ Add Laptop</a>
-            <button class="btn btn-outline-danger rounded-pill ms-2" id="clearAllBtn">Clear All</button>
-        </div>
-    </div>
 
-       
-        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-        <div class="table-responsive">
-            <table class="table table-borderless table-hover mb-0" id="laptopsTable">
-                <thead class="bg-primary-subtle text-primary">
-                    <tr>
-                        <th class="ps-4">Name</th>
-                        <th>Display</th>
-                        <th>Product ID</th>
-                        <th>Processor</th>
-                        <th>RAM</th>
-                        <th>Storage</th>
-                        <th>Graphics</th>
-                        <th>System</th>
-                        <th>Year</th>
-                        <th>Stock</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody" class="align-middle">
-                    <tr>
-                        <td colspan="11" class="text-center py-5">
-                            <div class="opacity-50">
-                                <h5 class="mb-1">Your warehouse is empty</h5>
-                                <p class="small mb-0">Check again later or add a new unit.</p>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="card">
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0" id="laptopsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Product ID</th>
+                            <th>Processor</th>
+                            <th>RAM</th>
+                            <th>Storage</th>
+                            <th>Graphics</th>
+                            <th>Display</th>
+                            <th>System</th>
+                            <th>Year</th>
+                            <th>Stock</th>
+                            <th>Price</th>
+                            <th style="width: 140px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
         </div>
     </div>
-   
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/index.js"></script>
-
 </body>
 </html>
